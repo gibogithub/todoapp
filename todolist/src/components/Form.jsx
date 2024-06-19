@@ -10,6 +10,7 @@ export default function Form({ todos, setTodos }) {
     setTodos([...todos, todo]);
     setTodo({ name: "", done: false });
   }
+
   return (
     <form className={styles.todoform} onSubmit={handleSubmit}>
       <div className={styles.inputContainer}>
