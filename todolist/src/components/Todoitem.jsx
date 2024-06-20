@@ -6,11 +6,10 @@ export default function TodoItem({ item, todos, setTodos }) {
     setTodos(todos.filter((todo) => todo !== item));
   }
   function handleClick(name) {
-    setTodos(
-      todos.map((todos) =>
-        todo.name === name ? { ...todo, done: !todo.done } : todo
-      )
+    const newArray = todos.map((todo) =>
+      todo.name === name ? { ...todo, done: !todo.done } : todo
     );
+    setTodos(newArray);
   }
   const className = item.done ? styles.completed : "";
   return (
